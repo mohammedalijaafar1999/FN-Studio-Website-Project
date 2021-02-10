@@ -122,13 +122,15 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.work-diplay {
+.work-diplay,
+.work-diplay-reverse {
   grid-column: span 1;
   text-align: right;
   align-self: center;
 }
 
-.work-diplay img {
+.work-diplay img,
+.work-diplay-reverse img {
   box-shadow: 0 0 30px rgb(138, 138, 138);
   display: block;
   margin-left: auto;
@@ -136,11 +138,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.work-diplay img:hover {
+.work-diplay img:hover,
+.work-diplay-reverse img:hover {
   transform: scale(1.1);
 }
 
-.work-description {
+.work-description,
+.work-description-reverse {
   grid-column: span 3;
   padding: 3rem;
   align-self: center;
@@ -177,16 +181,25 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .work-diplay {
+  .work-diplay,
+  .work-diplay-reverse {
     grid-column: span 1;
   }
 
-  .work-diplay img {
+  .work-diplay img,
+  .work-diplay-reverse img {
     width: 100%;
   }
 
-  .work-description {
-    grid-column: span 2;
+  .work-description,
+  .work-description-reverse {
+    grid-column: span 1;
     padding: 0;
+  }
+
+  /* flip postions of image and text for reverse */
+
+  .work-diplay-reverse {
+    grid-row: 1/2;
   }
 }
