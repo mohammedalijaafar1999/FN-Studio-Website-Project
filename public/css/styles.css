@@ -1,0 +1,192 @@
+/* --------- initail setup --------- */
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  padding: 0;
+  position: relative;
+}
+
+/* menu */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar {
+  overflow: hidden;
+  z-index: 100;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* --------- intro section --------- */
+
+.background-video {
+  object-fit: cover;
+  /* width: 100vw; */
+  height: 100vh;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* animating background opacity */
+
+@keyframes introOpacity {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.548);
+  }
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  color: white;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.322); */
+  animation-duration: 3s;
+  animation-name: introOpacity;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.name {
+  justify-content: center;
+  align-items: center;
+}
+
+.intro h1 {
+  grid-column: span 1;
+  font-size: 6vw;
+  margin: 0;
+  align-self: flex-end;
+  justify-self: center;
+}
+
+.intro p {
+  font-size: 1.5vw;
+  grid-column: span 1;
+  align-self: flex-start;
+  text-align: center;
+}
+
+/* --------- our work --------- */
+
+.works {
+  display: grid;
+  margin: 0 auto;
+  padding: 0 10%;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 1920px;
+  row-gap: 50px;
+}
+
+.works h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.work {
+  display: grid;
+  font-size: 1.3rem;
+  margin: 1rem 30px;
+  color: rgb(71, 71, 71);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.work-diplay {
+  grid-column: span 1;
+  text-align: right;
+  align-self: center;
+}
+
+.work-diplay img {
+  box-shadow: 0 0 30px rgb(138, 138, 138);
+  display: block;
+  margin-left: auto;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.work-diplay img:hover {
+  transform: scale(1.1);
+}
+
+.work-description {
+  grid-column: span 3;
+  padding: 3rem;
+  align-self: center;
+}
+
+/* --------- for mobile --------- */
+
+@media screen and (max-width: 600px) {
+  .intro {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .intro h1 {
+    grid-column: span 1;
+    font-size: 16vw;
+    justify-self: center;
+    align-self: end;
+  }
+
+  .intro p {
+    font-size: 5vw;
+    text-align: center;
+    grid-column: span 1;
+    align-self: flex-start;
+  }
+
+  /* works */
+
+  .works {
+    margin: 0 0;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .work-diplay {
+    grid-column: span 1;
+  }
+
+  .work-diplay img {
+    width: 100%;
+  }
+
+  .work-description {
+    grid-column: span 2;
+    padding: 0;
+  }
+}
