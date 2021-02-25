@@ -1,7 +1,14 @@
+/* Custom fonts */
+@font-face {
+  font-family: Fonarto;
+  src: url("../fonts/Fonarto.otf");
+}
+
 /* --------- initail setup --------- */
 html {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  font-family: Fonarto;
   padding: 0;
   margin: 0;
 }
@@ -17,27 +24,55 @@ body {
   position: relative;
 }
 
-/* menu */
+/* --------- menu --------- */
 
-.sticky {
+.menu-bar {
   position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-#navbar {
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  top: 1rem;
+  left: 1rem;
+  font-size: rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.123);
   z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.247);
 }
 
-#navbar a {
-  float: left;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px;
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  transition: all 0.5s;
+}
+
+.menu.active {
+  top: 0;
+  overflow: auto;
+  background-color: rgb(41, 41, 41);
+}
+
+.menu h1 {
+  margin: 1rem 0;
+}
+
+.menu a {
+  font-size: 4rem;
   text-decoration: none;
-  font-size: 1rem;
+  color: white;
 }
 
 /* --------- intro section --------- */
@@ -98,7 +133,7 @@ body {
   text-align: center;
 }
 
-/* --------- our work --------- */
+/* --------- our clients --------- */
 
 .works {
   display: grid;
@@ -129,17 +164,18 @@ body {
   align-self: center;
 }
 
-.work-display img,
-.work-display-reverse img {
+.work-display video,
+.work-display-reverse video {
   box-shadow: 0 0 30px rgb(138, 138, 138);
   display: block;
+  object-fit: cover;
   margin-left: auto;
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
 
-.work-display img:hover,
-.work-display-reverse img:hover {
+.work-display video:hover,
+.work-display-reverse video:hover {
   transform: scale(1.1);
 }
 
@@ -153,6 +189,10 @@ body {
 /* --------- for mobile --------- */
 
 @media screen and (max-width: 600px) {
+  .menu a {
+    font-size: 3rem;
+  }
+
   .intro {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -170,7 +210,7 @@ body {
     align-self: flex-start;
   }
 
-  /* works */
+  /* clients */
 
   .works {
     margin: 0 0;
