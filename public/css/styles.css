@@ -334,4 +334,8 @@ button {
   .app-form {
     width: 100%;
   }
+
+  .contact-us .form {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
