@@ -11,11 +11,18 @@ html {
   font-family: Fonarto;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 0;
   margin: 0;
+}
+
+input,
+button {
+  font-family: Fonarto;
+  font-size: 1.3rem !important;
 }
 
 .wrapper {
@@ -126,6 +133,13 @@ body {
   justify-self: center;
 }
 
+.intro.logo {
+  grid-column: span 1;
+  width: 50vw;
+  justify-self: center;
+  align-self: end;
+}
+
 .intro p {
   font-size: 1.5vw;
   grid-column: span 1;
@@ -146,6 +160,7 @@ body {
 
 .works h1 {
   font-size: 3rem;
+  color: rgb(71, 71, 71);
   text-align: center;
 }
 
@@ -186,6 +201,74 @@ body {
   align-self: center;
 }
 
+/* --------- contact us --------- */
+
+.contact-us {
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
+
+.contact-us .form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 0 auto;
+  padding: 0 12%;
+  max-width: 1920px;
+  margin-bottom: 2rem;
+}
+
+.contact-us h1 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  text-shadow: 0 0 15px rgb(97, 97, 97);
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #ea1d6f;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
 /* --------- for mobile --------- */
 
 @media screen and (max-width: 600px) {
@@ -196,6 +279,7 @@ body {
   .intro {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .intro h1 {
     grid-column: span 1;
     font-size: 16vw;
@@ -241,5 +325,13 @@ body {
 
   .work-display-reverse {
     grid-row: 1/2;
+  }
+
+  .contact-us h1 {
+    font-size: 3rem;
+  }
+
+  .app-form {
+    width: 100%;
   }
 }
