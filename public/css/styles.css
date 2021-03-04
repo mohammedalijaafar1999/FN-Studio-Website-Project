@@ -321,6 +321,11 @@ button {
     padding: 0;
   }
 
+  .work-description h1,
+  .work-description-reverse h1 {
+    text-align: center !important;
+  }
+
   /* flip postions of image and text for reverse */
 
   .work-display-reverse {
