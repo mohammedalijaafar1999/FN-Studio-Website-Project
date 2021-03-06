@@ -10,6 +10,7 @@
     <!-- Custom js -->
     <script defer src="public/js/menu-script.js"></script>
     <script src="public/js/background-video.js"></script>
+    <script defer src="public/js/clients-tabs.js"></script>
 
     <!-- jQuery -->
     <script
@@ -31,6 +32,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
+    <!-- Background video -->
     <video
       id="background-video"
       autoplay
@@ -77,134 +79,297 @@
         >
           Our Clients
         </h1>
-        <div class="work">
-          <div
-            data-aos="fade-down"
-            data-aos-duration="2000"
-            class="work-display"
+        <!-- Tab links -->
+        <div class="category-tab" id="defaultOpen">
+          <button class="tablinks" onclick="openCategory(event, 'brands')">
+            Brands
+          </button>
+          <button
+            class="tablinks"
+            onclick="openCategory(event, 'content-creators')"
           >
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              src="public/videos/Brands/nissan.mp4"
-            ></video>
+            Content Creators
+          </button>
+          <button class="tablinks" onclick="openCategory(event, 'restaurants')">
+            Restaurants
+          </button>
+        </div>
+
+        <!-- Tab content -->
+        <div id="brands" class="tabcontent">
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/nissan.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            class="work-description"
-          >
-            <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quam necessitatibus porro iste hic accusantium quibusdam tenetur
-              quod non dolor.
-            </p>
+          <div class="work">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display-reverse"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/kifah.mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/E3 gamez.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="work">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            class="work-description-reverse"
-          >
-            <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quam necessitatibus porro iste hic accusantium quibusdam tenetur
-              quod non dolor.
-            </p>
+
+        <div id="content-creators" class="tabcontent">
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/nissan.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
-          <div
-            data-aos="fade-down"
-            data-aos-duration="2000"
-            class="work-display-reverse"
-          >
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              src="public/videos/Brands/kifah.mp4"
-            ></video>
+          <div class="work">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display-reverse"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/kifah.mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/E3 gamez.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="work">
-          <div
-            data-aos="fade-down"
-            data-aos-duration="2000"
-            class="work-display"
-          >
-            <video
-              autoplay
-              muted
-              loop
-              playsinline
-              src="public/videos/Brands/E3 gamez.mp4"
-            ></video>
+
+        <div id="restaurants" class="tabcontent">
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/nissan.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="2000"
-            class="work-description"
-          >
-            <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quam necessitatibus porro iste hic accusantium quibusdam tenetur
-              quod non dolor.
-            </p>
+          <div class="work">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display-reverse"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/kifah.mp4"
+              ></video>
+            </div>
+          </div>
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                src="public/videos/Brands/E3 gamez.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="contact-us" id="contact-us">
-        <div class="form">
-          <form
-            action="mailto:someone@example.com"
-            method="post"
-            enctype="text/plain"
-          >
-            <h1>Contact Us</h1>
-            <div class="app-form">
-              <div class="app-form-group">
-                <input
-                  class="app-form-control"
-                  placeholder="NAME"
-                  name="name"
-                />
-              </div>
-              <div class="app-form-group">
-                <input
-                  class="app-form-control"
-                  placeholder="EMAIL"
-                  name="mail"
-                />
-              </div>
-              <div class="app-form-group message">
-                <input
-                  class="app-form-control"
-                  placeholder="MESSAGE"
-                  name="comment"
-                  size="50"
-                />
-              </div>
-              <div class="app-form-group buttons">
-                <button class="app-form-button">SEND</button>
-              </div>
-            </div>
-          </form>
-          <div class="soical media">
-            <h1>Soical Media</h1>
-          </div>
+        <h1>Contact Us</h1>
+        <div class="contact-us-container">
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+            FN-Studio
+          </a>
+          <a href="#">
+            <i class="fab fa-whatsapp"></i>
+            FN-Studio
+          </a>
+          <a href="#">
+            <i class="fas fa-at"></i>
+            FN-Studio
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Scripts -->
-    <script>
+    <script defer>
       AOS.init();
     </script>
     <!-- Anime.js -->
