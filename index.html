@@ -9,8 +9,9 @@
 
     <!-- Custom js -->
     <script defer src="public/js/menu-script.js"></script>
-    <script src="public/js/background-video.js"></script>
+    <script defer src="public/js/background-video.js"></script>
     <script defer src="public/js/clients-tabs.js"></script>
+    <script defer src="public/js/videos-click-overlay.js"></script>
 
     <!-- jQuery -->
     <script
@@ -67,21 +68,21 @@
         </div> -->
         <h1 class="ml3">FN STUDIO</h1>
         <!-- <p class="ml3t">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque quas laborum excepturi odit eius qui!</p> -->
-        <p class="ml3t">Where your vision becomes a reality</p>
+        <p class="ml3t">We bring your vision to life</p>
       </div>
 
       <!-- our clients -->
       <div class="works" id="works">
-        <h1
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          style="font-size: 4rem; text-shadow: 0 0 15px rgb(194, 194, 194)"
-        >
+        <h1 data-aos="fade-up" data-aos-duration="2000" style="font-size: 4rem">
           Our Clients
         </h1>
         <!-- Tab links -->
-        <div class="category-tab" id="defaultOpen">
-          <button class="tablinks" onclick="openCategory(event, 'brands')">
+        <div class="category-tab">
+          <button
+            class="tablinks"
+            onclick="openCategory(event, 'brands')"
+            id="defaultOpen"
+          >
             Brands
           </button>
           <button
@@ -97,6 +98,10 @@
 
         <!-- Tab content -->
         <div id="brands" class="tabcontent">
+          <h1>To the next level!</h1>
+          <h2 style="margin-bottom: 5rem">
+            We take you to the next step presenting your brand on our Fn way !
+          </h2>
           <div class="work">
             <div
               data-aos="fade-down"
@@ -108,6 +113,7 @@
                 muted
                 loop
                 playsinline
+                id="nissan-video"
                 src="public/videos/Brands/nissan.mp4"
               ></video>
             </div>
@@ -117,40 +123,21 @@
               class="work-description"
             >
               <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
+              <p>Strong vibes even in your screen!</p>
             </div>
           </div>
-          <div class="work">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description-reverse"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
-            </div>
-            <div
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              class="work-display-reverse"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                src="public/videos/Brands/kifah.mp4"
-              ></video>
-            </div>
+
+          <div class="work-video-overlay" id="nissan-overlay">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/8WhUkxMKhrI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
+
           <div class="work">
             <div
               data-aos="fade-down"
@@ -162,6 +149,43 @@
                 muted
                 loop
                 playsinline
+                id="kifah-video"
+                src="public/videos/Brands/kifah.mp4"
+              ></video>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
+              <p>Its all about details.</p>
+            </div>
+          </div>
+
+          <div class="work-video-overlay" id="kifah-overlay">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/8WhUkxMKhrI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <div class="work">
+            <div
+              data-aos="fade-down"
+              data-aos-duration="2000"
+              class="work-display"
+            >
+              <video
+                autoplay
+                muted
+                loop
+                playsinline
+                id="e3-video"
                 src="public/videos/Brands/E3 gamez.mp4"
               ></video>
             </div>
@@ -171,12 +195,19 @@
               class="work-description"
             >
               <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
+              <p>Visualize your power.</p>
             </div>
+          </div>
+
+          <div class="work-video-overlay" id="e3-overlay">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/8WhUkxMKhrI"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
 

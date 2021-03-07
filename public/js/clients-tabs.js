@@ -23,5 +23,5 @@ function openCategory(evt, categoryName) {
 
 
 window.addEventListener('DOMContentLoaded', function () {
-    openCategory(event, 'brands')
+    document.getElementById("defaultOpen").click();
 });

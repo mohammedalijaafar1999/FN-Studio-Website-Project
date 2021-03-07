@@ -8,7 +8,7 @@ anime.timeline({
     .add({
         targets: '.ml3 .letter',
         opacity: [0, 0],
-        duration: 2000,
+        duration: 1000,
         easing: "linear"
     })
     .add({
@@ -29,7 +29,7 @@ anime.timeline({
     .add({
         targets: '.ml3t .letterp',
         opacity: [0, 0],
-        duration: 3500,
+        duration: 3000,
         easing: "linear"
     })
     .add({
