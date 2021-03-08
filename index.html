@@ -74,7 +74,7 @@
       <!-- our clients -->
       <div class="works" id="works">
         <h1 data-aos="fade-up" data-aos-duration="2000" style="font-size: 4rem">
-          Our Clients
+          <span style="color: #6c9ec7">Our</span> Clients
         </h1>
         <!-- Tab links -->
         <div class="category-tab">
@@ -87,12 +87,17 @@
           </button>
           <button
             class="tablinks"
+            id="content-link"
             onclick="openCategory(event, 'content-creators')"
           >
-            Content Creators
+            <span class="pink">Content Creators</span>
           </button>
-          <button class="tablinks" onclick="openCategory(event, 'restaurants')">
-            Restaurants
+          <button
+            class="tablinks"
+            id="food-link"
+            onclick="openCategory(event, 'food')"
+          >
+            Food
           </button>
         </div>
 
@@ -104,9 +109,17 @@
           </h2>
           <div class="work">
             <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
+              <p>Strong vibes even in your screen!</p>
+            </div>
+            <div
               data-aos="fade-down"
               data-aos-duration="2000"
-              class="work-display"
+              class="work-display-reverse"
             >
               <video
                 autoplay
@@ -116,14 +129,6 @@
                 id="nissan-video"
                 src="public/videos/Brands/nissan.mp4"
               ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
-              <p>Strong vibes even in your screen!</p>
             </div>
           </div>
 
@@ -140,9 +145,17 @@
 
           <div class="work">
             <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
+              <p>Its all about details.</p>
+            </div>
+            <div
               data-aos="fade-down"
               data-aos-duration="2000"
-              class="work-display"
+              class="work-display-reverse"
             >
               <video
                 autoplay
@@ -152,14 +165,6 @@
                 id="kifah-video"
                 src="public/videos/Brands/kifah.mp4"
               ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
-              <p>Its all about details.</p>
             </div>
           </div>
 
@@ -176,9 +181,17 @@
 
           <div class="work">
             <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description-reverse"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
+              <p>Visualize your power.</p>
+            </div>
+            <div
               data-aos="fade-down"
               data-aos-duration="2000"
-              class="work-display"
+              class="work-display-reverse"
             >
               <video
                 autoplay
@@ -188,14 +201,6 @@
                 id="e3-video"
                 src="public/videos/Brands/E3 gamez.mp4"
               ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
-              <p>Visualize your power.</p>
             </div>
           </div>
 
@@ -211,8 +216,21 @@
           </div>
         </div>
 
+        <!-- Tab content -->
         <div id="content-creators" class="tabcontent">
           <div class="work">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              class="work-description"
+            >
+              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Delectus quam necessitatibus porro iste hic accusantium
+                quibusdam tenetur quod non dolor.
+              </p>
+            </div>
             <div
               data-aos="fade-down"
               data-aos-duration="2000"
@@ -225,18 +243,6 @@
                 playsinline
                 src="public/videos/Brands/nissan.mp4"
               ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
             </div>
           </div>
           <div class="work">
@@ -295,87 +301,27 @@
           </div>
         </div>
 
-        <div id="restaurants" class="tabcontent">
-          <div class="work">
-            <div
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              class="work-display"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                src="public/videos/Brands/nissan.mp4"
-              ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">NISSAN</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
-            </div>
-          </div>
-          <div class="work">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description-reverse"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">KIFAH GALLARY</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
-            </div>
-            <div
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              class="work-display-reverse"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                src="public/videos/Brands/kifah.mp4"
-              ></video>
-            </div>
-          </div>
-          <div class="work">
-            <div
-              data-aos="fade-down"
-              data-aos-duration="2000"
-              class="work-display"
-            >
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                src="public/videos/Brands/E3 gamez.mp4"
-              ></video>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="work-description"
-            >
-              <h1 style="text-align: left; margin: 1rem 0">E3GAMEZ</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Delectus quam necessitatibus porro iste hic accusantium
-                quibusdam tenetur quod non dolor.
-              </p>
-            </div>
+        <!-- Tab content -->
+        <div id="food" class="tabcontent">
+          <h1>Tasty Fn photography!</h1>
+          <h2>Tasting the food? Why not tasting the photos!</h2>
+          <br /><br />
+          <h1 style="color: #8abbbe">Gallery</h1>
+          <div class="gallery">
+            <img class="gallery-image" src="./public/images/1-min.jpg" alt="" />
+            <img class="gallery-image" src="./public/images/7-min.jpg" alt="" />
+            <img
+              class="gallery-image"
+              src="./public/images/16-min.jpg"
+              alt=""
+            />
+            <img class="gallery-image" src="./public/images/8-min.jpg" alt="" />
+            <img
+              class="gallery-image"
+              src="./public/images/19-min.jpg"
+              alt=""
+            />
+            <img class="gallery-image" src="./public/images/9-min.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -383,15 +329,15 @@
       <div class="contact-us" id="contact-us">
         <h1>Contact Us</h1>
         <div class="contact-us-container">
-          <a href="#">
+          <a href="https://instagram.com/fn.studioo?igshid=4122imm4xqh7">
             <i class="fab fa-instagram"></i>
             FN-Studio
           </a>
-          <a href="#">
+          <a href="https://wa.me/97333399840">
             <i class="fab fa-whatsapp"></i>
             FN-Studio
           </a>
-          <a href="#">
+          <a href="mailto: info.fn.studioo@gmail.com">
             <i class="fas fa-at"></i>
             FN-Studio
           </a>
