@@ -303,8 +303,8 @@ button {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 20px;
-  margin: 0 auto;
+  gap: 40px;
+  margin: 0 7rem;
   margin-bottom: 5vh;
 }
 
@@ -427,6 +427,8 @@ button {
 
   .gallery {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 0 auto;
   }
 
   /* contact us */
