@@ -1,31 +1,60 @@
+var tag = document.createElement("script");
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName("script")[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player("player", {
+        height: "390",
+        width: "640",
+        videoId: "-jM-ICsBX3I",
+        events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+}
+
+function onPlayerReady(event) { }
+
+function onPlayerStateChange(event) { }
+
+function playVideo(id) {
+    player.loadVideoById({ videoId: id, startSeconds: 0 });
+}
+
 window.addEventListener('DOMContentLoaded', function () {
 
-    // nissan overlay video
+    // nissan video
     document.getElementById("nissan-video").addEventListener("click", function () {
-        $("#nissan-overlay").toggleClass('active');
+        $(".work-video-overlay").toggleClass('active');
+        playVideo('2wJ7qPepV9M');
     });
 
-    document.getElementById("nissan-overlay").addEventListener("click", function () {
-        $("#nissan-overlay").toggleClass('active');
-    });
-
-    // kifah overlay video
+    // kifah video
     document.getElementById("kifah-video").addEventListener("click", function () {
-        $("#kifah-overlay").toggleClass('active');
+        $(".work-video-overlay").toggleClass('active');
+        playVideo('f85ZdgsTXQk');
     });
 
-    document.getElementById("kifah-overlay").addEventListener("click", function () {
-        $("#kifah-overlay").toggleClass('active');
-    });
-
-
-    // e3 overlay video
+    // e3 video
     document.getElementById("e3-video").addEventListener("click", function () {
-        $("#e3-overlay").toggleClass('active');
+        $(".work-video-overlay").toggleClass('active');
+        playVideo('qPj6PUKKeAE');
     });
 
-    document.getElementById("e3-overlay").addEventListener("click", function () {
-        $("#e3-overlay").toggleClass('active');
+    //overlay player
+    document.getElementById("video-overlay").addEventListener("click", function () {
+        $(".work-video-overlay").toggleClass('active');
+        player.stopVideo();
     });
 
 });
