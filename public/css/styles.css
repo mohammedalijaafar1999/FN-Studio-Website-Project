@@ -298,6 +298,49 @@ button {
 
 /* Content Creators */
 
+#baraa-back {
+  position: relative;
+}
+
+#baraa-back img {
+  position: absolute;
+  top: -125px;
+  right: -200px;
+  width: 400px;
+  z-index: 0;
+}
+
+#ameen-back {
+  position: relative;
+}
+#ameen-back img {
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  width: 300px;
+  z-index: 0;
+}
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.video-container::after {
+  padding-top: 56.25%;
+  display: block;
+  content: "";
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* Food */
 
 .gallery {
@@ -455,6 +498,26 @@ button {
   .work-display-reverse {
     grid-row: 1/2;
   }
+
+  /* content creators */
+
+  #baraa-back img {
+    position: absolute;
+    top: -125px;
+    right: -100px;
+    width: 300px;
+    z-index: 0;
+  }
+
+  #ameen-back img {
+    position: absolute;
+    top: -50px;
+    left: -70px;
+    width: 150px;
+    z-index: 0;
+  }
+
+  /* food */
 
   .gallery {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
