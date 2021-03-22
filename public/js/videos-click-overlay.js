@@ -90,7 +90,7 @@ function onYouTubeIframeAPIReady() {
         width: "640",
         videoId: "1Hs3guHULPo",
         events: {
-            onReady: onPlayerReady2,
+            onReady: onPlayerReady3,
             onStateChange: onPlayerStateChange2,
         },
         playerVars: {
@@ -98,12 +98,16 @@ function onYouTubeIframeAPIReady() {
             autoplay: 0,
         },
     });
-
-    document.getElementById("defaultOpen").click();
-
 }
 
-function onPlayerReady2(event) { }
+function onPlayerReady2(event) {
+    document.getElementById("defaultOpen").click();
+}
+
+function onPlayerReady3(event) {
+    document.getElementById("defaultOpen").click();
+}
+
 function onPlayerStateChange2(event) { }
 
 function onPlayerReady(event) { }
