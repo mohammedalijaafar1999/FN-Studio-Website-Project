@@ -6,6 +6,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
+var ameenPlayer;
+var baraaPlayer;
+
+var aranos1Player;
+var aranos2Player;
+var aranos3Player;
+
 var player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("player", {
@@ -21,7 +28,81 @@ function onYouTubeIframeAPIReady() {
             autoplay: 0,
         },
     });
+
+    baraaPlayer = new YT.Player("baraa-player", {
+        height: "390",
+        width: "640",
+        videoId: "dxidaZbl3Ls",
+        events: {
+            onReady: onPlayerReady2,
+            onStateChange: onPlayerStateChange2,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+
+    ameenPlayer = new YT.Player("ameen-player", {
+        height: "390",
+        width: "640",
+        videoId: "HdD4JFCsI18",
+        events: {
+            onReady: onPlayerReady2,
+            onStateChange: onPlayerStateChange2,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+
+    aranos1Player = new YT.Player("aranos1-player", {
+        height: "390",
+        width: "640",
+        videoId: "zzQmD2n3xOQ",
+        events: {
+            onReady: onPlayerReady2,
+            onStateChange: onPlayerStateChange2,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+
+    aranos2Player = new YT.Player("aranos2-player", {
+        height: "390",
+        width: "640",
+        videoId: "MSUNdD3GnkE",
+        events: {
+            onReady: onPlayerReady2,
+            onStateChange: onPlayerStateChange2,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+
+    aranos3Player = new YT.Player("aranos3-player", {
+        height: "390",
+        width: "640",
+        videoId: "1Hs3guHULPo",
+        events: {
+            onReady: onPlayerReady2,
+            onStateChange: onPlayerStateChange2,
+        },
+        playerVars: {
+            controls: 1,
+            autoplay: 0,
+        },
+    });
+
 }
+
+function onPlayerReady2(event) { }
+function onPlayerStateChange2(event) { }
 
 function onPlayerReady(event) { }
 

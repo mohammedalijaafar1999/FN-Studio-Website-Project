@@ -1,4 +1,13 @@
 function openCategory(evt, categoryName) {
+
+
+    ameenPlayer.stopVideo();
+    baraaPlayer.stopVideo();
+
+    aranos1Player.stopVideo();
+    aranos2Player.stopVideo();
+    aranos3Player.stopVideo();
+
     // Declare all variables
     var i, tabcontent, tablinks;
 
