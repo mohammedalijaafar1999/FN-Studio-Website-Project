@@ -31,6 +31,6 @@ function openCategory(evt, categoryName) {
 }
 
 
-window.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("defaultOpen").click();
-});
+// window.addEventListener('DOMContentLoaded', function () {
+//     document.getElementById("defaultOpen").click();
+// });
