@@ -99,6 +99,8 @@ function onYouTubeIframeAPIReady() {
         },
     });
 
+    document.getElementById("defaultOpen").click();
+
 }
 
 function onPlayerReady2(event) { }
